@@ -1,0 +1,23 @@
+<div class="container">
+<app-joke-edit (searchJoke)="onSearchJoke($event)" [jokesAmount]="jokesAmount"></app-joke-edit>
+<!--<ul class="list-group">-->
+  <!--<a-->
+          <!--class="list-group-item"-->
+          <!--style="cursor: pointer"-->
+          <!--*ngFor="let joke of jokes"-->
+  <!--&gt;-->
+    <!--{{ joke.name }}-->
+  <!--</a>-->
+<!--</ul>-->
+
+<div class="row">
+  <div class="col ">
+    <app-joke-item
+            *ngFor="let jokeEl of  jokes ; let i = index"
+            [joke]="jokeEl"
+            [index]="i" ></app-joke-item>
+  </div>
+
+</div>
+
+</div>
