@@ -1,21 +1,25 @@
 @import "../../../theme/theme-variables";
 .inputField{
   &.ng-touched.ng-invalid{
-    border:solid rgba($red,0.4) 1px;
-    box-shadow: 0 0 0 0.1rem rgba($red,0.4);;
+    border:solid rgba($red, .4) 1px;
+    box-shadow: 0 0 0 .1rem rgba($red, .4);;
 
     &.form-control:focus{
       border:solid $red 1px;
-      box-shadow: 0 0 0 0.1rem $red;
+      box-shadow: 0 0 0 .1rem $red;
     }
   }
 }
 
 .alert{
   position: absolute;
+  width: 88%;
   top: 40px;
-  left: 15px;
-  padding: 0.75rem .95rem;
+  //left: 15px;
+  //padding: 0.75rem .95rem;
+  left: 50%;
+  padding: .75rem;
+  transform: translate(-50%,0);
   z-index: 999;
-  box-shadow: 0 6px 14px rgba($black,0.5);
+  box-shadow: 0 6px 14px rgba($black, .5);
 }
