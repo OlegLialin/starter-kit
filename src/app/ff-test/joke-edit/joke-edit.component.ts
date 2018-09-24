@@ -1,4 +1,5 @@
 import {Component, OnInit, EventEmitter, ElementRef, ViewChild, Output, Input} from '@angular/core';
+import {FormGroup, Validators, FormControl} from "@angular/forms";
 
 @Component({
   selector: 'app-joke-edit',
@@ -9,7 +10,13 @@ export class JokeEditComponent implements OnInit {
   @ViewChild('nameInput') nameInputRef: ElementRef;
   @Output() searchJoke = new EventEmitter<string>();
   @Input() jokesAmount: number;
-  constructor() { }
+  myForm : FormGroup;
+
+  constructor(){
+    this.myForm = new FormGroup({
+      "searchField": new FormControl("", Validators.pattern("[a-zA-Z ]*"))
+    });
+  }
 
   ngOnInit() {
   }
